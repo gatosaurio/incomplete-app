@@ -1,0 +1,54 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= link_to product.name, product_path(product) %></td>
+        <td>
+	        <%= form_tag(customer_line_items_path, :method => "post") do %>
+			  <%= hidden_field_tag(:product_id, product.id) %>
+			  <%= submit_tag("Add to Cart") %>
+			<% end %>
+        </td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Qty</th>
+    <th>Unit Price</th>
+    <th>Full Price</th>
+  </tr>
+  <% @current_cart.line_items.each do |line_item| %>
+    <tr>
+      <td><%= line_item.product.name %></td>
+      <td class="qty"><%= line_item.quantity %></td>
+      <td class="price"><%= number_to_currency(line_item.unit_price) %></td>
+      <td class="price"><%= number_to_currency(line_item.full_price) %></td>
+      
+    </tr>
+    <%= @current_cart.line_items.count %>
+
+  <% end %>
+  <tr>
+    <td class="total price" colspan="4">
+      <Total: <%= number_to_currency @current_cart.total_price %>
+    </td>
+  </tr>
+</table> 
+
+
+<%= form_tag(customer_carts_path, :method => "post") do %>
+        <%= hidden_field_tag(:customer_id) %>
+        <%= submit_tag("Add to Cart") %>
+      <% end %>
+

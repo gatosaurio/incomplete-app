@@ -1,0 +1,10 @@
+  
+  <h3> Productos de: <%= @customer.name.capitalize %></h3>
+
+<% @cart.line_items.each do |li| %>
+
+  <%= li.quantity %>
+  <%= li.product.name %>
+<% end %>  
+
+
