@@ -8,7 +8,7 @@ class CustomersController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @customers }
     end
-
+    
   end
 
   # GET /customers/1

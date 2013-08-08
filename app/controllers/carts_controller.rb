@@ -6,6 +6,7 @@ class CartsController < ApplicationController
   def new
   	@products = Product.all
     @current_cart = current_cart
+    #@cart = Cart.find(params[:cart_id])
     @cart = Cart.new
   end
 

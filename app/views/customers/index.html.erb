@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Street</th>
     <th>Cantidad de Pedidos</th>
+    <th>Cantidad de line items en ultimo carro</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,10 +14,12 @@
   <tr>
     <td><%= customer.name %></td>
     <td><%= customer.street %></td>
+    <td><%= customer.carts.count %></td>
+    <td><%= customer.carts.find(:last).line_items.count %></td>
     <td><%= link_to 'Show', customer %></td>
     <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
     <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><%= link_to 'Create Order', new_customer_cart_path(customer) %></td>
+    <td><%= link_to 'Create Order', new_customer_cart_path(customer, @cart) %></td>
     
   </tr>
 <% end %>

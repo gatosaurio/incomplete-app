@@ -5,11 +5,6 @@ class Customer < ActiveRecord::Base
  
   has_many :line_items
 
-  def current_cart
-    if self.cart.empty?
-      self.cart.create!
-    end
-    self.cart
-  end
+ 
   
 end
