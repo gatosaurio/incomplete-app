@@ -77346,3 +77346,205 @@ Served asset /products.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-08 03:04:12 -0400
 Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-08 17:43:22 -0400
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers" [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "carts" WHERE "carts"."customer_id" = 9
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = 9 ORDER BY "carts"."id" DESC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = 219
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE "carts"."customer_id" = 10[0m
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = 10 ORDER BY "carts"."id" DESC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = 225[0m
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" 
+  Rendered customers/index.html.erb within layouts/application (313.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Completed 200 OK in 1000ms (Views: 717.0ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /carts.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/customers.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /customers.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /line_items.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /products.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /carts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /customers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /line_items.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /products.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:24 -0400
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Processing by CustomersController#index as HTML
+  [1m[35mCustomer Load (1.0ms)[0m  SELECT "customers".* FROM "customers" 
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE "carts"."customer_id" = 9[0m
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = 9 ORDER BY "carts"."id" DESC LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = 219[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "carts" WHERE "carts"."customer_id" = 10
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = 10 ORDER BY "carts"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = 225
+  [1m[36mCart Load (1.0ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+  Rendered customers/index.html.erb within layouts/application (19.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "carts".* FROM "carts" 
+Completed 200 OK in 49ms (Views: 40.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /carts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/customers.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /customers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /line_items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /carts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:49 -0400
+Served asset /customers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:50 -0400
+Served asset /line_items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:50 -0400
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-08 17:43:50 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.0ms)[0m  [1mSELECT "customers".* FROM "customers" [0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "carts" WHERE "carts"."customer_id" = 9
+  [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = 9 ORDER BY "carts"."id" DESC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = 219
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE "carts"."customer_id" = 10[0m
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."customer_id" = 10 ORDER BY "carts"."id" DESC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = 225[0m
+  [1m[35mCart Load (0.0ms)[0m  SELECT "carts".* FROM "carts" 
+  Rendered customers/index.html.erb within layouts/application (10.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" [0m
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /carts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/customers.css?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /customers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /line_items.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /carts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /customers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2013-08-08 17:44:14 -0400
+Served asset /line_items.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-08-08 17:44:15 -0400
+Served asset /products.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-08 17:44:15 -0400
+Served asset /application.js - 304 Not Modified (2ms)
