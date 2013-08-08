@@ -25,7 +25,7 @@ class CartsController < ApplicationController
   def show
     @customer = Customer.find(params[:customer_id])
     @cart = @customer.carts.find(params[:id])
-    #@line_items = @customer.line_items.find(params[:id])
+    @line_items = @customer.line_items.find(params[:id])
     
 
   end

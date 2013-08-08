@@ -8,7 +8,8 @@ class CustomersController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @customers }
     end
-    
+    @penultimate = Cart.all
+    @penultimate[-2]
   end
 
   # GET /customers/1
